@@ -5,6 +5,8 @@ build/*
 
 test_bundle.js
 
+bower_components
+
 
 ### Node ###
 # Logs

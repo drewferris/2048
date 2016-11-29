@@ -77,7 +77,7 @@ gulp.task('wipe-css', () => {
 });
 
 gulp.task('sass', ['wipe-css', 'clean'], () => {
-  return gulp.src('./app/css/style.scss')
+  return gulp.src('./app/css/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./app/css/'));
 });

@@ -8,7 +8,7 @@ module.exports = function (app) {
       scope: {
         ngModel: '='
       },
-      templateUrl: 'js/grid/grid.html'
+      templateUrl: './views/grid.html'
     };
   });
 };
