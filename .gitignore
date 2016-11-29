@@ -3,6 +3,9 @@ build/*
 
 # Created by https://www.gitignore.io/api/node,osx,vim
 
+test_bundle.js
+
+
 ### Node ###
 # Logs
 logs

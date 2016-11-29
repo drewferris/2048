@@ -87,7 +87,7 @@ gulp.task('sass-watch', () => {
 });
 
 gulp.task('bundle:test', () => {
-  return gulp.src(__dirname + '/test/*_test.js')
+  return gulp.src(__dirname + '/test/**/*_test.js')
     .pipe(webpack({
       output: {
         filename: 'test_bundle.js'
