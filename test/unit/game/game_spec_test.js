@@ -7,17 +7,28 @@ require('../../../app/js/client');
 describe('Game Mobule', function () {
   describe('GameManager', function () {
 
-    let GameManagerService;
+    let gameManager;
+    let _gridService;
 
-    beforeEach(() => {
+    beforeEach(($provide) => {
       angular.mock.module('twentyfourtyeightApp');
       angular.mock.inject(function (GameManager) {
-        GameManagerService = GameManager;
+        gameManager = GameManager;
       });
+
+      _gridService = {
+        anyCellsAvailable: angular.noop,
+        tileMatchesAvailable: angular.noop
+      };
+      angular.mock.provide('GridService', _gridService);
     });
 
-    it('should work', () => {
-      expect(true).toBe(true);
+
+    describe('.movesAvailable', function () {
+      it('should report true if there are cells available', function () {
+        spyOn(_gridService, 'anyCellsAvailable').andReturn(true);
+        expect(gameManager.movesAvailable()).toBeTruthy();
+      });
     });
   });
 });

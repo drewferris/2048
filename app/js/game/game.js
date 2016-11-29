@@ -17,7 +17,7 @@ module.exports = function (app) {
     };
 
     service.movesAvailable = function () {
-
+      return GridService.anyCellsAvailable() || GridService.tileMatchesAvailable();
     };
 
     return service;
