@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function (app) {
-  app.factory('GameManager', function () {
+  app.factory('GameManager', function (GridService) {
     const service = {};
 
     service.newGame = function () {
