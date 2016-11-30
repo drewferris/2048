@@ -44,7 +44,7 @@ module.exports = function (app) {
     };
 
     this.on = function (cb) {
-
+      this.keyEventHandlers.push(cb);
     };
   });
 };
