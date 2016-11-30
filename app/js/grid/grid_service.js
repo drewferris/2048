@@ -9,7 +9,7 @@ module.exports = function (app) {
     this.tiles = [];
     this.startingTileNumber = 2;
 
-    this. buildStartingPosition = function () {
+    this.buildStartingPosition = function () {
       for(var x = 0; x < this.startingTileNumber; x++) {
         this.randomlyInsertNewTile();
       }

@@ -5,7 +5,16 @@ module.exports = function (app) {
     const service = {};
 
     service.newGame = function () {
+      GridService.buildEmptyGameBoard();
+      GridService.buildStartingPosition();
+      service.reinit();
+    };
 
+    service.reinit = function () {
+      service.gameOver = false;
+      service.win = false;
+      service.currentScore = 0;
+      service.highScore = 0;
     };
 
     service.move = function () {
